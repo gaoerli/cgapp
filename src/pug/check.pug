@@ -1,0 +1,99 @@
+extend partials/layout.pug
+
+block title
+  title 考勤
+  //- style.
+  link(rel="stylesheet", href="../lib/mui.css")
+
+block main
+  .mui-content.check
+    .searchbox
+      .mui-input-row.check-icon
+        //- input.search-input(type="date" placeholder="日期搜索" )
+        input.search-input(type="text" placeholder="日期搜索" onfocus="(this.type='date')")
+    
+    .mapbox#map
+
+    .addrlist
+      ul.mui-table-view.mui-row(style="overflow:hidden")
+        li.mui-table-view-cell.mui-media.box-shade
+          .mui-col-xs-12.mui-row.order
+            .mui-media-body.mui-col-xs-6.item-left.check-icon.sun
+              p.mui-ellipsis.order-icon.order-addr
+                | 上班打卡时间 8:20:04
+              p.mui-ellipsis.order-icon.order-tel
+                | 九江市城市管理执法局
+
+            .item-center
+              .time （上班时间8:30）
+              .flag 正常
+
+            img.mui-media-object.mui-pull-right.order-img.mui-col-xs-2.item-right(src='../img/check-icon03.png', alt="")
+
+        li.mui-table-view-cell.mui-media.box-shade
+          .mui-col-xs-12.mui-row.order
+            .mui-media-body.mui-col-xs-6.item-left.check-icon.star
+              p.mui-ellipsis.order-icon.order-addr
+                | 上班打卡时间 8:20:04
+              p.mui-ellipsis.order-icon.order-tel
+                | 九江市城市管理执法局
+
+            .item-center
+              .time （上班时间8:30）
+              .flag 正常
+
+            img.mui-media-object.mui-pull-right.order-img.mui-col-xs-2.item-right(src='../img/check-icon03.png', alt="")
+
+        li.mui-table-view-cell.mui-media.box-shade
+          .mui-col-xs-12.mui-row.order
+            .mui-media-body.mui-col-xs-6.item-left.check-icon.sun
+              p.mui-ellipsis.order-icon.order-addr
+                | 上班打卡时间 8:20:04
+              p.mui-ellipsis.order-icon.order-tel
+                | 九江市城市管理执法局
+
+            .item-center
+              .time （上班时间8:30）
+              .flag 正常
+
+            img.mui-media-object.mui-pull-right.order-img.mui-col-xs-2.item-right(src='../img/check-icon03.png', alt="")
+
+        li.mui-table-view-cell.mui-media.box-shade
+          .mui-col-xs-12.mui-row.order
+            .mui-media-body.mui-col-xs-6.item-left.check-icon.star
+              p.mui-ellipsis.order-icon.order-addr
+                | 上班打卡时间 8:20:04
+              p.mui-ellipsis.order-icon.order-tel
+                | 九江市城市管理执法局
+
+            .item-center
+              .time （上班时间8:30）
+              .flag 正常
+
+            img.mui-media-object.mui-pull-right.order-img.mui-col-xs-2.item-right(src='../img/check-icon03.png', alt="")
+
+       
+block individual-script
+  script(src="http://api.map.baidu.com/api?v=2.0&ak=j0QFa27yhhMmDOy9rmR0t4P6")
+  script.
+    var map;
+    $(function() {
+      map = new BMap.Map("map"); 
+      //定位九江
+      var point = new BMap.Point(116.0,29.7);
+      // 创建点坐标
+      map.centerAndZoom(point, 16);
+      // 初始化地图， 设置中心点坐标和地图级别
+      var marker = new BMap.Marker(point);
+      map.addOverlay(marker);
+
+      //- $("input[type='date']").on("focus", function() {
+      //-   $(this)attr("type","date");
+      //-   $(this).removeAttr("placeholder");
+      //- }).on("blur", function() {
+      //-   if($(this).val()== '')
+      //-   { $(this).attr("placeholder","日期的默认值")
+      //- })
+
+    })
+      

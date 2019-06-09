@@ -1,0 +1,60 @@
+extend partials/layout.pug
+
+block title
+  title 城管
+  style.
+    
+block main
+  .cgindex 
+    .cgindex-box
+      .title-box 我的案件
+
+      .img-box
+        .img-item
+          img(src="../img/cg01.jpg", alt="")
+          span.img-sup 案件上传
+          
+        .img-item
+          img(src="../img/cg02.jpg", alt="")
+          span.img-sup 案件核实
+
+        .img-item
+          img(src="../img/cg03.jpg", alt="")
+          span.img-sup 案件处理
+          
+        .img-item
+          img(src="../img/cg04.jpg", alt="")
+          span.img-sup 案件核查
+          
+      .icon-box
+        .icon-item.icon-01 我的待办
+        .icon-item.icon-02 我的任务
+        .icon-item.icon-03 所有任务
+        .icon-item.icon-04 系统设置
+        
+    .cgindex-box
+      .title-box 市容考勤巡查
+
+      .icon-box.col-bet
+        .icon-item.sm-icon.sm-01 考勤签到
+        .icon-item.sm-icon.sm-02 定点巡查
+        .icon-item.sm-icon.sm-03 巡查记录
+        
+    .cgindex-box
+      .title-box 车辆违停
+
+      .icon-box.col-bet
+        .icon-item.sm-icon.sm-04 车辆违停
+        .icon-item.sm-icon.sm-05 违停记录
+        .icon-item.sm-icon.hidden 我的待办
+
+        
+    .cgindex-box
+      .title-box 智能执法
+
+      .icon-box
+        .icon-item.sm-icon.sm-06 违法登记
+        .icon-item.sm-icon.sm-07 违法案件搜索
+        .icon-item.sm-icon.sm-08 处罚登记
+        .icon-item.sm-icon.sm-09 历史记录
+        
